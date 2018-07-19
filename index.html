@@ -41,7 +41,7 @@
       left: 3vw;
     }
       .logo {
-        height: 2vw;
+        height: 2vh;
       }
 
     .text-box {
@@ -53,18 +53,50 @@
       .header-primary {
         color: #fff;
         text-transform: uppercase;
+        backface-visibility: hidden;      /* removing 'thin' of rotated */
       }
-        .header-promary-main {
+        .header-primary-main {
           display: block;
           font-size: 3rem;
           font-weight: 600;
           letter-spacing: 2rem;
+          animation: moveDownHeaderPrimaryMain 1s ease-out;
         }
-        .header-promary-sub {
+        .header-primary-sub {
           display: block;
           font-size: 1.5rem;
           font-weight: 300;
+          animation: moveDownHeaderPrimarySub 1s ease-out;
+          /* animation-delay: 3s;
+          animation-iteration-count: 3; */
         }
+
+    @keyframes moveDownHeaderPrimaryMain {
+      0% {
+        opacity: 0;
+        transform: translateY(-10vh)
+      }
+      80% {
+        transform: translateY(1vh)
+      }
+      100% {
+        opacity: 1;
+        transform: translate(0)
+      }
+    }
+    @keyframes moveDownHeaderPrimarySub {
+      0% {
+        opacity: 0;
+        transform: translateY(-5vh)
+      }
+      80% {
+        transform: translateY(1vh)
+      }
+      100% {
+        opacity: 1;
+        transform: translate(0)
+      }
+    }
   </style>
 
   <div class="app">
@@ -75,8 +107,8 @@
 
       <div class="text-box">
         <h1 class="header-primary">
-          <span class="header-promary-main">Fjordtur</span>
-          <span class="header-promary-sub">niesamowite wycieczki po norwegii</span>
+          <span class="header-primary-main">Fjordtur</span>
+          <span class="header-primary-sub">niesamowite wycieczki po norwegii</span>
         </h1>
       </div>
 
