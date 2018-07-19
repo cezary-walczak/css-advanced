@@ -28,7 +28,7 @@
       padding: 3vw;
     }
     .header {
-      height: 95vh;
+      height: 90vh;
       background: 
         linear-gradient(to right bottom, rgba(0, 35, 104, 0.6), rgba(240, 39, 40, 0.6)), 
         url(./imgs/header-bgr.jpg) no-repeat center center / cover;
@@ -41,14 +41,15 @@
       left: 3vw;
     }
       .logo {
-        height: 2vh;
+        height: 3vh;
       }
 
     .text-box {
       position: absolute;
-      top: 40%;
+      top: 50%;
       left: 50%;
-      transform: translate(-50%, -50%)
+      transform: translate(-50%, -50%);
+      text-align: center;
     }
       .header-primary {
         color: #fff;
@@ -59,17 +60,68 @@
           display: block;
           font-size: 3rem;
           font-weight: 600;
-          letter-spacing: 2rem;
+          letter-spacing: 5rem;
+          padding-left: 3rem;
           animation: moveDownHeaderPrimaryMain 1s ease-out;
         }
         .header-primary-sub {
           display: block;
-          font-size: 1.5rem;
+          font-size: 1rem;
           font-weight: 300;
+          letter-spacing: 1rem;
           animation: moveDownHeaderPrimarySub 1s ease-out;
           /* animation-delay: 3s;
           animation-iteration-count: 3; */
         }
+        .btn:link, 
+        .btn:visited {
+          text-transform: uppercase;
+          text-decoration: none;
+          font-weight: 300;
+          font-size: 1rem;
+          padding: 2vh 2vw;
+          margin: 5vh 5vw;
+          display: inline-block;
+          border-radius: 100px;
+          transition: all .2s;
+          position: relative;
+        }
+        .btn:hover {
+          transform: translateY(-2px);
+          box-shadow: 0 10px 20px rgba(0,0,0,.2);
+        }
+        .btn:active {
+          transform: translateY(-1px);
+          box-shadow: 0 5px 10px rgba(0,0,0,.2);
+        }
+        .btn::after {
+          content: "";
+          display: inline-block;
+          height: 100%;
+          width: 100%;
+          border-radius: 100px;
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: -1;
+          transition: all .5s
+        }
+        .btn:hover::after {
+          transform: scale(1.4, 1.6);
+          opacity: 0;
+
+        }
+          .btn-animated {
+            animation: moveUpHeaderBtn 1s ease-out 0.5s;
+            animation-fill-mode: backwards; /* apply styles before animation starts */
+          }
+          .btn-white {
+            background-color: #fff;
+            color: #666;
+          }
+          .btn-white::after {
+            background-color: #fff;
+          }
 
     @keyframes moveDownHeaderPrimaryMain {
       0% {
@@ -81,7 +133,7 @@
       }
       100% {
         opacity: 1;
-        transform: translate(0)
+        transform: translateY(0)
       }
     }
     @keyframes moveDownHeaderPrimarySub {
@@ -94,7 +146,20 @@
       }
       100% {
         opacity: 1;
-        transform: translate(0)
+        transform: translateY(0)
+      }
+    }
+    @keyframes moveUpHeaderBtn {
+      0% {
+        opacity: 0;
+        transform: translateY(5vh)
+      }
+      80% {
+        transform: translateY(-1vh)
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0)
       }
     }
   </style>
@@ -109,6 +174,7 @@
         <h1 class="header-primary">
           <span class="header-primary-main">Fjordtur</span>
           <span class="header-primary-sub">niesamowite wycieczki po norwegii</span>
+          <a href="#" class="btn btn-white btn-animated">Odkryj nasze podróże</a>
         </h1>
       </div>
 
