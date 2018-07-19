@@ -7,9 +7,11 @@
 
   <title>Document</title>
 
-  <link href="https://fonts.googleapis.com/css?family=Montserrat:300,900&amp;subset=latin-ext" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:300,600,900&amp;subset=latin-ext" rel="stylesheet"> 
 </head>
 <body>
+  <!-- F02728 -->
+  <!-- 002368 -->
   <style>
     * {
       margin: 0;
@@ -22,13 +24,62 @@
       font-weight: 300;
       font-size: 1rem;
       line-height: 1.5;
-      color: #666
+      color: #666;
+      padding: 3vw;
     }
+    .header {
+      height: 95vh;
+      background: 
+        linear-gradient(to right bottom, rgba(0, 35, 104, 0.6), rgba(240, 39, 40, 0.6)), 
+        url(./imgs/header-bgr.jpg) no-repeat center center / cover;
+      clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+      position: relative;
+    }
+    .logo-box {
+      position: absolute;
+      top: 3vw;
+      left: 3vw;
+    }
+      .logo {
+        height: 2vw;
+      }
+
+    .text-box {
+      position: absolute;
+      top: 40%;
+      left: 50%;
+      transform: translate(-50%, -50%)
+    }
+      .header-primary {
+        color: #fff;
+        text-transform: uppercase;
+      }
+        .header-promary-main {
+          display: block;
+          font-size: 3rem;
+          font-weight: 600;
+          letter-spacing: 2rem;
+        }
+        .header-promary-sub {
+          display: block;
+          font-size: 1.5rem;
+          font-weight: 300;
+        }
   </style>
 
   <div class="app">
     <header class="header">
-      Some text...
+      <div class="logo-box">
+        <img src="imgs/logo.png" alt="Logo" class="logo">
+      </div>
+
+      <div class="text-box">
+        <h1 class="header-primary">
+          <span class="header-promary-main">Fjordtur</span>
+          <span class="header-promary-sub">niesamowite wycieczki po norwegii</span>
+        </h1>
+      </div>
+
     </header>
   </div>
 
