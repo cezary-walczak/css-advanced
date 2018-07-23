@@ -13,19 +13,23 @@
   <!-- F02728 -->
   <!-- 002368 -->
   <style>
-    * {
+    *,
+    *::after,
+    *::before {
       margin: 0;
       padding: 0;
       border: 0;
-      box-sizing: border-box;
+      box-sizing: inherit;
     }
+    html,
     body {
       font-family: "Montserrat", sans-serif;
       font-weight: 300;
-      font-size: 1rem;
+      font-size: 62.5%;
       line-height: 1.5;
       color: #666;
-      padding: 3vw;
+      padding: 3rem;
+      box-sizing: border-box;
     }
     .header {
       height: 90vh;
@@ -35,36 +39,37 @@
       clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
       position: relative;
     }
-    .logo-box {
+    .header__logo-box {
       position: absolute;
-      top: 3vw;
-      left: 3vw;
+      top: 4rem;
+      left: 4rem;
     }
-      .logo {
-        height: 3vh;
+      .header__logo {
+        height: 3.5rem;
       }
 
-    .text-box {
+    .header__text-box {
       position: absolute;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
       text-align: center;
     }
-      .header-primary {
+      .heading-primary {
         color: #fff;
         text-transform: uppercase;
         backface-visibility: hidden;      /* removing 'thin' of rotated */
+        margin-bottom: 6rem;
       }
-        .header-primary-main {
+        .heading-primary--main {
           display: block;
           font-size: 3rem;
           font-weight: 600;
           letter-spacing: 5rem;
-          padding-left: 3rem;
+          padding-left: 4rem;
           animation: moveDownHeaderPrimaryMain 1s ease-out;
         }
-        .header-primary-sub {
+        .heading-primary--sub {
           display: block;
           font-size: 1rem;
           font-weight: 300;
@@ -79,27 +84,27 @@
           text-decoration: none;
           font-weight: 300;
           font-size: 1rem;
-          padding: 2vh 2vw;
-          margin: 5vh 5vw;
+          padding: 2rem 2rem;
+          margin: 5rem 5rem;
           display: inline-block;
-          border-radius: 100px;
+          border-radius: 10rem;
           transition: all .2s;
           position: relative;
         }
         .btn:hover {
           transform: translateY(-2px);
-          box-shadow: 0 10px 20px rgba(0,0,0,.2);
+          box-shadow: 0 1rem 2rem rgba(0,0,0,.2);
         }
         .btn:active {
           transform: translateY(-1px);
-          box-shadow: 0 5px 10px rgba(0,0,0,.2);
+          box-shadow: 0 .5rem 1rem rgba(0,0,0,.2);
         }
         .btn::after {
           content: "";
           display: inline-block;
           height: 100%;
           width: 100%;
-          border-radius: 100px;
+          border-radius: 10rem;
           position: absolute;
           top: 0;
           left: 0;
@@ -111,25 +116,25 @@
           opacity: 0;
 
         }
-          .btn-animated {
+          .btn--animated {
             animation: moveUpHeaderBtn 1s ease-out 0.5s;
             animation-fill-mode: backwards; /* apply styles before animation starts */
           }
-          .btn-white {
+          .btn--white {
             background-color: #fff;
             color: #666;
           }
-          .btn-white::after {
+          .btn--white::after {
             background-color: #fff;
           }
 
     @keyframes moveDownHeaderPrimaryMain {
       0% {
         opacity: 0;
-        transform: translateY(-10vh)
+        transform: translateY(-10rem)
       }
       80% {
-        transform: translateY(1vh)
+        transform: translateY(1rem)
       }
       100% {
         opacity: 1;
@@ -139,10 +144,10 @@
     @keyframes moveDownHeaderPrimarySub {
       0% {
         opacity: 0;
-        transform: translateY(-5vh)
+        transform: translateY(-5rem)
       }
       80% {
-        transform: translateY(1vh)
+        transform: translateY(1rem)
       }
       100% {
         opacity: 1;
@@ -152,10 +157,10 @@
     @keyframes moveUpHeaderBtn {
       0% {
         opacity: 0;
-        transform: translateY(5vh)
+        transform: translateY(5rem)
       }
       80% {
-        transform: translateY(-1vh)
+        transform: translateY(-1rem)
       }
       100% {
         opacity: 1;
@@ -166,15 +171,15 @@
 
   <div class="app">
     <header class="header">
-      <div class="logo-box">
-        <img src="imgs/logo.png" alt="Logo" class="logo">
+      <div class="header__logo-box">
+        <img src="imgs/logo.png" alt="Logo" class="header__logo">
       </div>
 
-      <div class="text-box">
-        <h1 class="header-primary">
-          <span class="header-primary-main">Fjordtur</span>
-          <span class="header-primary-sub">niesamowite wycieczki po norwegii</span>
-          <a href="#" class="btn btn-white btn-animated">Odkryj nasze podróże</a>
+      <div class="header__text-box">
+        <h1 class="heading-primary">
+          <span class="heading-primary--main">Fjordtur</span>
+          <span class="heading-primary--sub">niesamowite wycieczki po norwegii</span>
+          <a href="#" class="btn btn--white btn--animated">Odkryj nasze podróże</a>
         </h1>
       </div>
 
