@@ -1,0 +1,22 @@
+{
+  "name": "css-advanced",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss css/style.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cezary-walczak/css-advanced.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cezary-walczak/css-advanced/issues"
+  },
+  "homepage": "https://github.com/cezary-walczak/css-advanced#readme",
+  "devDependencies": {
+    "node-sass": "^4.9.2"
+  }
+}
