@@ -1,0 +1,39 @@
+@keyframes moveDownHeaderPrimaryMain {
+  0% {
+    opacity: 0;
+    transform: translateY(-10rem)
+  }
+  80% {
+    transform: translateY(1rem)
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0)
+  }
+}
+@keyframes moveDownHeaderPrimarySub {
+  0% {
+    opacity: 0;
+    transform: translateY(-5rem)
+  }
+  80% {
+    transform: translateY(1rem)
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0)
+  }
+}
+@keyframes moveUpHeaderBtn {
+  0% {
+    opacity: 0;
+    transform: translateY(5rem)
+  }
+  80% {
+    transform: translateY(-1rem)
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0)
+  }
+}
