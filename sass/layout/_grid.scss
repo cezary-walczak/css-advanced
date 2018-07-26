@@ -1,0 +1,14 @@
+.row {
+  max-width: $grid-width;
+  margin: 0 auto;
+  display: flex;
+  .col {
+    flex-grow: 1;
+    border: 1px solid red;
+    margin: $gutter-vertical $gutter-horizontal;
+  }
+  .col2 {
+    flex-grow: 2;
+    margin: $gutter-vertical $gutter-horizontal;
+  }
+}
