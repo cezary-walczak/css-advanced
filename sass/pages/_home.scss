@@ -3,3 +3,15 @@
   padding: 25rem;
   margin-top: -10vh;
 }
+
+.section-features {
+  padding: 20rem 0;
+  background: 
+  linear-gradient(to right bottom, $color-primary, $color-secondary),
+  url(../imgs/nat-4.png) no-repeat center center / cover;
+  margin-top: -10rem;
+  transform: skewY(-5deg);
+  & > * {
+    transform: skewY(5deg);
+  }
+}
