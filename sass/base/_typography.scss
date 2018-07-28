@@ -1,3 +1,12 @@
+html,
+body {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+  font-size: 62.5%; // defines what 1rem is
+  line-height: 1.5;
+  color: $color-gray;
+}
+
 .heading-primary {
   color: $color-white;
   text-transform: uppercase;
@@ -21,11 +30,31 @@
     animation-iteration-count: 3; */
   }
 }
-html,
-body {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 300;
-  font-size: 62.5%; // defines what 1rem is
-  line-height: 1.5;
-  color: $color-gray;
+
+.heading-secondary {
+  font-size: 2rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  display: inline-block;
+  background: linear-gradient(to right bottom, $color-primary, $color-secondary);
+  background-clip: text;
+  color: transparent;
+  letter-spacing: .2rem;
+  transition: all .2s;
+  &:hover {
+    transform: skewY(2deg) skewX(15deg) scale(1.1);
+    text-shadow: .5rem 1rem 2rem rgba($color-black, 0.2);
+  }
 }
+
+.heading-tertiary {
+  font-size: 1.6rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.paragraph {
+  font-size: 1.4rem;
+  &:not(:last-child) {
+    margin-bottom: 3rem;
+  }
+} 
