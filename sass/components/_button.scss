@@ -48,6 +48,13 @@
       background-color: $color-white;
     }
   }
+  &--gradient {
+    background: linear-gradient(to right bottom, $color-primary, $color-secondary);
+    color: $color-white;
+    &::after {
+      background: linear-gradient(to right bottom, $color-primary, $color-secondary)
+    }
+  }
 }
 
 .btn-text {
