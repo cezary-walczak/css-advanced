@@ -12,6 +12,7 @@
     display: inline-block;
     background: linear-gradient(to right bottom, $color-primary, $color-secondary);
     background-clip: text;
+    -webkit-background-clip: text;
     color: transparent;
   }
   &__text {
